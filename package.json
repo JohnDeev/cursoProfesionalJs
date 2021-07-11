@@ -1,0 +1,26 @@
+{
+  "name": "cursoprofesionaljs",
+  "version": "1.0.0",
+  "description": "Curso Profesional de Js de platzi Nunca Pares de aprender",
+  "main": "/src/index.js",
+  "scripts": {
+    "start": "live-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JohnDeev/cursoProfesionalJs.git"
+  },
+  "keywords": [
+    "JavaScript",
+    "Profesional"
+  ],
+  "author": "JohnDev johnpertuz@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JohnDeev/cursoProfesionalJs/issues"
+  },
+  "homepage": "https://github.com/JohnDeev/cursoProfesionalJs#readme",
+  "devDependencies": {
+    "live-server": "^1.2.1"
+  }
+}
