@@ -29,11 +29,15 @@ class MediaPlayer {
         this.video.muted = true;
     }
     unMute(){
-        this.video.unmute = false;
+        this.video.muted = false;
     }
-    toogleMuteUnmute() {
-        
-        this.video.muted = !this.video.muted
+    toogleMuteUnMute() {
+        debugger
+        if(this.video.muted){
+            this.unMute();
+        } else {
+            this.mute();
+        }
       }
 
     
