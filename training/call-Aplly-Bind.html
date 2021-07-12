@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <a href="/training/">Go back</a>
+    <p><Em>Abre la consola</Em></p>
+
+    <script>
+        //Establece this usando call
+        function saludar() {
+            console.log(`Hola soy ${this.name} ${this.apellido}`);
+        }
+
+        const john ={
+            name: 'john',
+            apellido: 'Pertuz',
+        }
+
+        saludar.call(john);
+
+        function caminar (metros,direccion) {
+            console.log(`${this.name} camina ${metros} metros hacia  ${direccion}.`);
+         }
+         //call metodo que se usa para asignar this a un objeto y se pasan argumentos separado por comas
+         caminar.call(john,300,'santa marta');
+
+         //call se pasan argumentos separado por comas
+
+
+//Establece this usando apply
+         caminar.apply(john, [800,'noreste']);
+        
+         //apply metodo que se usa para asignar this a un objeto y se pasan argumentos en un array, donde podras pasar muchos 
+         
+         
+         // establecer this en una nueva funcion usando bind: bind genera otra funcion
+         const daniel = { 
+             name: 'Daniel',
+             apellido: 'sanchez'
+            };
+
+            const danielSaluda = saludar.bind(daniel);
+            danielSaluda();
+
+            const danielCamina =  caminar.bind(daniel,2000 );
+            danielCamina('este');
+    </script>
+
+    
+</body>
+</html>
