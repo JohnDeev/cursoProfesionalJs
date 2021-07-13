@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototipo</title>
+</head>
+<body>
+
+    <a href="/training/">Go back</a>
+    <p><Em>Abre la consola</Em></p>
+
+    <script>
+    //A common and ordinary object
+        // const zelda = {
+        //     name: 'zelda',
+        // }
+
+        // zelda.saludar = function() {
+        //     console.log(`Hola soy ${this.name}`);
+        // }
+        // zelda.saludar();
+
+        // const link = {
+        //     name: 'Link',
+        // }
+
+        // link.saludar = function() {
+        //     console.log(`Hola soy ${this.name}`);
+        // }
+        // link.saludar();
+
+    //Funcion mas eficiente
+        // function hero ( name ){
+        //     const hero = {
+        //         name: name,
+        //     }
+        //     hero.saludar = function() {
+        //         console.log(`Hola soy ${this.name}`);
+        //     }   
+
+        //     return hero;
+
+        // }
+
+        // const zelda = hero('ZELDA');
+        // zelda.saludar();
+        // const link = hero('LINK');
+        // link.saludar();
+    
+    //Mejorando mas y evitar tener que crear la misma funcion cada vez 
+    // const heroMethods = {
+    //     saludar: function() {
+    //             console.log(`Me llamo ${this.name}`);
+    //         },   
+    // };
+
+    // function Hero(name){
+    //         const hero = {
+    //             name: name,
+    //         };
+    //         hero.saludar = heroMethods.saludar;
+    //         return hero;
+
+    //     }
+
+    //     const zelda = Hero('ZELDA');
+    //     zelda.saludar();
+        
+    //     const link = Hero('LINK');
+    //     link.saludar();
+
+    //Object.create
+        // const nuevoObjeto = Object.create(objeto);
+
+        const heroMethods = {
+        saludar: function() {
+                console.log(`Soy superheroe! ${this.name}`);
+            },   
+    };
+
+    function Hero(name){
+            const hero = Object.create(heroMethods);
+            hero.name = name;
+
+            return hero;
+                
+            };
+
+        
+
+        const zelda = Hero('ZELDA');
+        zelda.saludar();
+        
+        const link = Hero('LINK');
+        link.saludar();
+
+    </script>
+    
+</body>
+</html>
