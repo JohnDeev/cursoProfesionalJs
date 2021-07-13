@@ -8,8 +8,15 @@
 </head>
 <body>
     
+    
     <a href="/training/">Go back</a>
     <p><Em>Abre la consola</Em></p>
+    <ul>
+        <li><button class="call-to-action">Aprender</button></li>
+        <li><button class="call-to-action">Aprender</button></li>
+        <li><button class="call-to-action">Nunca Pares De Aprender</button></li>
+
+    </ul>
 
     <script>
         //Establece this usando call
@@ -50,6 +57,15 @@
 
             const danielCamina =  caminar.bind(daniel,2000 );
             danielCamina('este');
+        //Cuando es util el metodo bind
+            const buttons = document.getElementsByClassName('call-to-action');
+
+            [...buttons].forEach(button => { 
+                button.onclick = () => alert('Nunca Pares de aprender');
+            });
+
+
+
     </script>
 
     
