@@ -33,7 +33,7 @@ class MediaPlayer {
         this.video.muted = false;
     }
     toogleMuteUnMute() {
-        debugger
+        
         if(this.video.muted){
             this.unMute();
         } else {
