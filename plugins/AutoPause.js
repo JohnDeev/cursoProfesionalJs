@@ -17,8 +17,6 @@ class AutoPause {
     handlerIntersection(entries){
         const entry = entries[0];
 
-        console.log(entry);
-
         entry.isIntersecting ? this.player.play() : this.player.pause();
 
     }
