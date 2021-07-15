@@ -6,6 +6,7 @@ class MediaPlayer {
         this._initPlugins();
     }
     _initPlugins() {
+        
         this.plugins.forEach(plugins => {
             plugins.run();
         })
