@@ -4,7 +4,7 @@
   "description": "Curso Profesional de Js de platzi Nunca Pares de aprender",
   "main": "/src/index.js",
   "scripts": {
-    "start": "live-server"
+    "start": "parcel index.html training/index.html training/**/*.html"
   },
   "repository": {
     "type": "git",
@@ -21,6 +21,10 @@
   },
   "homepage": "https://github.com/JohnDeev/cursoProfesionalJs#readme",
   "devDependencies": {
-    "live-server": "^1.2.1"
-  }
+    "parcel-bundler": "^1.12.5",
+    "typescript": "^4.3.5"
+  },
+  "browserslist": [
+    "last 1 Chrome version"
+  ]
 }
