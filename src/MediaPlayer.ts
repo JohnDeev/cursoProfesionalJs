@@ -1,23 +1,27 @@
 class MediaPlayer {
+    video: HTMLMediaElement;
+    plugins: Array<any>;
     constructor(config) {
         this.video = config.el;
         this.plugins = config.plugins || [];
 
-        this._initPlugins();
+        this.initPlugins();
     }
-    _initPlugins() {
+    private initPlugins() {
         
         this.plugins.forEach(plugins => {
-            plugins.run();
+            plugins.run(this);
         })
     }
 
     play(){
         this.video.play();
     }
+
     pause(){
         this.video.pause();
     }
+
     togglePlay(){
         
         if(this.video.paused){
@@ -26,12 +30,15 @@ class MediaPlayer {
             this.video.pause();
         }
     }
+
     mute(){
         this.video.muted = true;
     }
+
     unMute(){
         this.video.muted = false;
     }
+    
     toogleMuteUnMute() {
         
         if(this.video.muted){

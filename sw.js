@@ -35,6 +35,9 @@ async function precache() {
 }
 
 async function cacheResponse( request) {
+    const chache = await caches.open('v1');
+    const response = await cache.match(request);
+    return response || fetch(request);
    
 }
 

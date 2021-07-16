@@ -1,5 +1,9 @@
+import MediaPlayer from "../src/MediaPlayer";
+
 class AutoPause {
-    constructor(video) {
+     private threshold: number;
+     player: HTMLMediaElement 
+    constructor(video: HTMLMediaElement) {
         this.threshold = 0.25;
         this.player = video
         this.handlerIntersection = this.handlerIntersection.bind(this)
@@ -14,14 +18,14 @@ class AutoPause {
 
         document.addEventListener('visibilitychange',this.handlerVisibilityChange)
     }
-    handlerIntersection(entries){
+    private handlerIntersection(entries: IntersectionObserverEntry[]){
         const entry = entries[0];
-
+        
         entry.isIntersecting ? this.player.play() : this.player.pause();
 
     }
 
-    handlerVisibilityChange(){
+    private handlerVisibilityChange(){
         const isVisibility = document.visibilityState === 'visible'
 
         isVisibility? this.player.play() : this.player.pause();
@@ -29,3 +33,7 @@ class AutoPause {
 }
 
 export default AutoPause;
+
+function video(video: any) {
+    throw new Error("Function not implemented.");
+}
