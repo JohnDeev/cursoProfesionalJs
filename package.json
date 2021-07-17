@@ -4,7 +4,7 @@
   "description": "Curso Profesional de Js de platzi Nunca Pares de aprender",
   "main": "/src/index.js",
   "scripts": {
-    "start": "parcel index.html training/index.html training/**/*.html"
+    "start": "parcel node index.html training/index.html training/**/*.html"
   },
   "repository": {
     "type": "git",
